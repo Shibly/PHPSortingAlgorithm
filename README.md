@@ -16,5 +16,6 @@ Listed Algorithms that are implemented :
 4. Shell Sort
 5. Comb Sort
 6. Merge Sort
+7. Quick Sort
 
 
