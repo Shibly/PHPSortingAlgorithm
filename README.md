@@ -8,6 +8,13 @@ Wikipedia is a great source to learn and I've learnt a lot more from there. The 
 
 Hope you will enjoy it. 
 
-I consider myself still a noob. The implementations may not fully optimized, but hey I'm learning it right :)
+Listed Algorithms that are implemented :
+
+1. Bubble Sort
+2. Selection Sort
+3. Insertion Sort
+4. Shell Sort
+5. Comb Sort
+6. Merge Sort
 
 
