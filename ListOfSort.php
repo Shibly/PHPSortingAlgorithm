@@ -190,11 +190,40 @@ class SortingAlgorithm
         return array_merge(self::quickSort($left), array($pivot), self::quickSort($right));
     }
 
+    /**
+     * @param array $array
+     * @return array
+     * The easiest sorting algorithm is not bubble sort..., it is not insertion sort...,
+     * it is gnome Sort !
+     * The gnome sort may be optimized by introducing a variable to store the position
+     * before traversing back toward the beginning of the list.
+     * This would allow the "gnome" to teleport back to his previous position after moving a flower pot.
+     * With this optimization, the gnome sort would become a variant of the insertion sort.
+     */
+
+    public static function gnomeSort(array $array)
+    {
+        for ($i = 1; $i < count($array);) {
+            if ($array[$i - 1] < $array[$i]) {
+                $i++;
+            } else {
+                $temp = $array[$i];
+                $array[$i] = $array[$i - 1];
+                $array[$i - 1] = $temp;
+                $i--;
+                if ($i = 0) {
+                    $i = 1;
+                }
+            }
+        }
+        return $array;
+    }
+
 
 }
 
 // Example
-$selectionSort = SortingAlgorithm::quickSort(array(6, 5, 3, 1, 8, 7, 2, 4));
+$selectionSort = SortingAlgorithm::gnomeSort(array(6, 5, 3, 1, 8, 7, 2, 4, 100, 23, 43, 45, 76, 889, 45645, 324234, 121));
 ?>
 <pre>
     <?php
