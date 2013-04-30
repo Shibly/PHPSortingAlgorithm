@@ -17,5 +17,6 @@ Listed Algorithms that are implemented :
 5. Comb Sort
 6. Merge Sort
 7. Quick Sort
+8. Gnome Sort
 
 
