@@ -219,11 +219,37 @@ class SortingAlgorithm
         return $array;
     }
 
+    public static function radixSort($array)
+    {
+        $temp = $output = array();
+        $len = count($array);
+
+        for ($i = 0; $i < $len; $i++) {
+            $temp[$array[$i]] = ($temp[$array[$i]] > 0)
+                ? ++$temp[$array[$i]]
+                : 1;
+        }
+
+        ksort($temp);
+
+        foreach ($temp as $key => $val) {
+            if ($val == 1) {
+                $output[] = $key;
+            } else {
+                while ($val--) {
+                    $output[] = $key;
+                }
+            }
+        }
+
+        return $output;
+    }
+
 
 }
 
 // Example
-$selectionSort = SortingAlgorithm::gnomeSort(array(6, 5, 3, 1, 8, 7, 2, 4, 100, 23, 43, 45, 76, 889, 45645, 324234, 121));
+$selectionSort = SortingAlgorithm::radixSort(array(6, 5, 3, 1, 8, 7, 2, 4, 100, 23, 43, 45, 76, 889, 45645, 324234, 121));
 ?>
 <pre>
     <?php
