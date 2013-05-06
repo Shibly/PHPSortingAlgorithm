@@ -18,5 +18,6 @@ Listed Algorithms that are implemented :
 6. Merge Sort
 7. Quick Sort
 8. Gnome Sort
+9. Radix Sort
 
 
